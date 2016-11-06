@@ -1,0 +1,84 @@
+body {
+  font-family: 'CooperBlack';
+}
+.main-container {
+  margin-top: 50px;
+}
+.navigation-bar {
+  background-color: #91ff73;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 0 0 15px 15px;
+  border: none;
+}
+.container-nav-bar {
+  margin: 0;
+}
+.navbar-brand {
+  padding: 0;
+}
+.logo-img {
+  width: 130px;
+}
+.name-brand-logo {
+  color: #38AA3E !important;
+  padding-top: 25px;
+  padding-left: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.navbar-default .navbar-nav > li > a {
+  letter-spacing: 1px;
+  color: white;
+  min-width: 160px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  @media (max-width:990px) {
+    min-width: 110px;
+  }
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: #38AA3E;
+  padding: 6px;
+  margin-top: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar-default .navbar-toggle {
+  background-color: #ddd;
+}
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.col-xs-5ths {
+  width: 20%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-5ths {
+    width: 20%;
+    float: left;
+  }
+}
