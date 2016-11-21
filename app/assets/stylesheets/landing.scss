@@ -3,13 +3,14 @@
   background: linear-gradient(white, #cff0ca);
 }
 .landing-page__wrap-week-action {
-  background: linear-gradient(#cff0ca, #91ff73);
+  background: linear-gradient(#cff0ca, #A1E396);
+  padding-bottom: 3%;
 }
 .landing-page__show-programs-text {
   margin-top: 5%;
 }
 .landing-page__show-programs-title {
-  color: #38AA3E;
+  color: #07773E;
   font-size: 40px;
   width: 70%;
   margin: 0 auto;
@@ -47,7 +48,7 @@
 }
 .landing-page__btn-learn-more {
   margin-top: 3%;
-  background-color: #91ff73;
+  background-color: #A1E396;
   border: none;
   border-radius: 30px;
   max-width: 60%;
@@ -68,7 +69,10 @@
   }
 }
 .landing-page__btn-learn-more:hover {
-  background-color: #38AA3E;
+  background-color: #07773E;
+}
+.btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus {
+  background-color: #07773E;
 }
 .landing-page__btn-shows-wrap-learn-more:hover {
   background-color: #b48484;
@@ -80,7 +84,7 @@
   width: 300px;
 }
 .landing-page__week-action {
-  color: #38AA3E;
+  color: #07773E;
   font-size: 40px;
   margin: 5% auto 0 auto;
   text-align: center;
@@ -145,14 +149,18 @@
   }
 }
 .landing-page__title-show {
-  color: grey;
+  color: #EE787D;
   text-align: center;
   font-size: 18px;
+  min-height: 50px;
   @media (max-width:767px) {
     font-size: 16px;
     word-wrap: break-word;
     min-height: 45px;
   }
+}
+.landing-page__title-show:hover {
+  color: #b48484;
 }
 .landing-page__text-show {
   text-align: center;
@@ -187,15 +195,19 @@
 .landing-page__image-1 {
   margin-top: 4%;
 }
-.landing-page__text-1 {
-  margin-top: 8%;
+.landing-page__main-wrap-candy-bar {
+  /*background: linear-gradient(white, #A1E396);*/
 }
-.landing-page__show-monkey-landing-page-1 {
-  width: 250px;
-  margin: 0 auto;
+.landing-page__text-candy-bar {
+  margin-top: 12%;
 }
-.landing-page__show-programs-title-1 {
-  color: #38AA3E;
+.landing-page__show-monkey-landing-page-candy-bar {
+  width: 470px;
+  float: right;
+  border-radius: 25px;
+}
+.landing-page__show-programs-title-candy-bar {
+  color: #07773E;
   font-size: 35px;
   width: 70%;
   margin: 0;
@@ -207,10 +219,10 @@
     font-size: 20px;
   }
 }
-.landing-page__show-programs-description-1 {
+.landing-page__show-programs-description-candy-bar {
   font-size: 18px;
     width: 70%;
-    text-align: justify;
+    text-align: center;
     margin: 0;
   @media (max-width:990px) {
     font-size: 20px;
