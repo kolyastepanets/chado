@@ -1,0 +1,8 @@
+- @perfomances.each_with_index do |perfomance|
+  .col-md-5ths.col-xs-6.landing-page__describe-each-show
+    = image_tag(perfomance.image, class: "img-show-desc img-responsive")
+    = link_to perfomance_path(perfomance), class: "landing-page__title-show center-block"
+      = perfomance.title
+    p.landing-page__text-show
+      = perfomance.text
+    = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block landing-page__btn-learn-more"

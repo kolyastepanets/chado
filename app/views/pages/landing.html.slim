@@ -1,3 +1,5 @@
+- content_for :head do
+  meta content="no-cache" name="turbolinks-cache-control"
 .col-xs-12.landing-page__animation-for-children
   .col-xs-7.landing-page__show-programs-text
     .landing-page__show-programs-title
@@ -12,52 +14,54 @@
       = link_to "узнать больше", "#", class: "btn btn-primary landing-page__btn-learn-more"
   .col-xs-5
     = image_tag("monkey.png", class: "landing-page__show-monkey-landing-page img-responsive")
-.col-xs-12
-  p.landing-page__week-action
-    = image_tag("wave_left.png", class: "landing-page__image-waves img-responsive")
-    span
-      | АКЦИЯ НЕДЕЛИ
-    = image_tag("wave_right.png", class: "landing-page__image-waves img-responsive")
-  .landing-page__week-action-text
-    p
-      | Рады сообщить, что при заказе 
-      | от 1000 грн для Вас в подарок к Вашему празднику - генератор мыльных пузырей. 
-      | Следите за нашими недельными акциями, и обещаем, что 
-      | удивим Вас нашими новинками
-    = link_to "узнать больше", "#", class: "btn btn-primary landing-page__btn-learn-more"
+.col-xs-12.landing-page__wrap-week-action
+  - if @week_action
+    p.landing-page__week-action
+      = image_tag("wave_left.png", class: "landing-page__image-waves img-responsive")
+      span
+        = @week_action.title
+      = image_tag("wave_right.png", class: "landing-page__image-waves img-responsive")
+    .landing-page__week-action-text
+      p
+        = @week_action.text
+      = link_to "узнать больше", "#", class: "btn btn-primary landing-page__btn-learn-more"
+
 .col-xs-12.landing-page__shows
-  .col-md-5ths.col-xs-6.landing-page__describe-each-show
-    = image_tag("trained_animals.png", class: "img-show-desc img-responsive")
-    p.landing-page__title-show
-      | Бумажное шоу
-    p.landing-page__text-show
-      | Описание лучшего шоу для лучшего агенства детских праздников
-    = link_to "узнать больше", "#", class: "btn btn-primary center-block landing-page__btn-learn-more"
-  .col-md-5ths.col-xs-6.landing-page__describe-each-show
-    = image_tag("trained_animals.png", class: "img-show-desc img-responsive")
-    p.landing-page__title-show
-      | Шоу фокусов
-    p.landing-page__text-show
-      | Описание лучшего шоу для лучшего агенства детских праздников
-    = link_to "узнать больше", "#", class: "btn btn-primary center-block landing-page__btn-learn-more"
-  .col-md-5ths.col-xs-6.landing-page__describe-each-show
-    = image_tag("trained_animals.png", class: "img-show-desc img-responsive")
-    p.landing-page__title-show
-      | Шоу мыльных пузырей
-    p.landing-page__text-show
-      | Описание лучшего шоу для лучшего агенства детских праздников
-    = link_to "узнать больше", "#", class: "btn btn-primary center-block landing-page__btn-learn-more"
-  .col-md-5ths.col-xs-6.landing-page__describe-each-show
-    = image_tag("trained_animals.png", class: "img-show-desc img-responsive")
-    p.landing-page__title-show
-      | Дрессированные животные
-    p.landing-page__text-show
-      | Описание лучшего шоу для лучшего агенства детских праздников
-    = link_to "узнать больше", "#", class: "btn btn-primary center-block landing-page__btn-learn-more"
-  .col-md-5ths.col-xs-6.landing-page__describe-each-show
-    = image_tag("trained_animals.png", class: "img-show-desc img-responsive")
-    p.landing-page__title-show
-      | Научное шоу
-    p.landing-page__text-show
-      | Описание лучшего шоу для лучшего агенства детских праздников
-    = link_to "узнать больше", "#", class: "btn btn-primary center-block landing-page__btn-learn-more"
+  #myCarousel.carousel.slide
+    .carousel-inner
+      - @perfomances.each_with_index do |perfomance, index|
+        .item{ class= "#{ "active" if index == 0 }"}
+          .col-md-5ths.col-xs-6.landing-page__describe-each-show
+            = image_tag(perfomance.image, class: "img-show-desc img-responsive")
+            = link_to perfomance_path(perfomance), class: "landing-page__title-show center-block"
+              = perfomance.title
+            p.landing-page__text-show
+              = perfomance.text
+            = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block landing-page__btn-shows-wrap-learn-more"
+
+    a.left.carousel-control data-slide="prev" href="#myCarousel" 
+      i.glyphicon.glyphicon-chevron-left
+    a.right.carousel-control data-slide="next" href="#myCarousel" 
+      i.glyphicon.glyphicon-chevron-right
+
+.col-xs-12
+  .col-xs-5.landing-page__image-1
+    = image_tag("monkey.png", class: "landing-page__show-monkey-landing-page-1 img-responsive")
+  .col-xs-7.landing-page__text-1
+    .landing-page__show-programs-title-1
+      p.text-center
+        | Анимация для детей
+    .landing-page__show-programs-description-1
+      p
+        | Наши профессиональные актеры-аниматоры 
+        | разнообразят любой праздник. 
+        | В игровой форме донесут до деток правила 
+        | этикета, научат правильному распорядку дня.
+  .col-xs-12.landing-page__show-programs-description-mobile-view
+    p
+      | Наши профессиональные актеры-аниматоры 
+      | разнообразят любой праздник. 
+      | В игровой форме донесут до деток правила 
+      | этикета, научат правильному распорядку дня.
+
+    = link_to "узнать больше", "#", class: "btn btn-primary landing-page__btn-learn-more center-block"

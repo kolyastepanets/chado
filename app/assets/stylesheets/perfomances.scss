@@ -1,0 +1,24 @@
+.perfomance-page__main-wrap {
+  margin: 0 auto;
+  @media (min-width:767px) and (max-width:1024px) {
+    margin-top: 10%;
+  }
+}
+.perfomance-page__main-image {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.perfomance-page__wrap-title {
+  font-size: 35px;
+  text-align: center;
+  @media (max-width:560px) {
+    font-size: 17px;
+  }
+}
+.perfomance-page__wrap-text {
+  margin-top: 3%;
+  font-size: 19px;
+  @media (max-width:560px) {
+    font-size: 14px;
+  }
+}
