@@ -35,8 +35,8 @@
             = image_tag(perfomance.image, class: "img-show-desc img-responsive")
             = link_to perfomance_path(perfomance), class: "landing-page__title-show center-block"
               = perfomance.title
-            p.landing-page__text-show
-              = perfomance.text
+            .landing-page__text-show
+              = perfomance.text.html_safe
             = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block landing-page__btn-shows-wrap-learn-more"
 
     a.left.carousel-control data-slide="prev" href="#myCarousel" 

@@ -34,7 +34,7 @@
 }
 .perfomances-page__describe-each-show {
   height: 400px;
-  margin-top: 8%;
+  margin-top: 4%;
   @media (min-width:990px) and (max-width:1024px) {
     height: 490px;
   }
@@ -47,7 +47,7 @@
 }
 .perfomances-page__text-show {
   text-align: center;
-  min-height: 180px;
+  min-height: 80px;
   @media (max-width:767px) {
     font-size: 12px;
     min-height: 225px;

@@ -6,4 +6,4 @@
     = image_tag(@perfomance.image, class: "perfomance-page__main-image img-responsive")
   .col-xs-8.perfomance-page__wrap-text
     p
-      = @perfomance.text
+      = @perfomance.text.html_safe

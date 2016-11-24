@@ -28,7 +28,7 @@ html
             #bs-example-navbar-collapse-1.collapse.navbar-collapse
               ul.nav.navbar-nav.navbar-right
                 li
-                  = link_to "Программы", programs_path
+                  = link_to "Аниматоры", programs_path
                 li
                   = link_to "Шоу", perfomances_path
                 li
@@ -42,4 +42,24 @@ html
                     | Контакты
         = yield
     footer.footer
-      .container
+      .container.footer-container
+        .col-xs-4.footer-left-part
+          div
+            = link_to "Чадо", root_path, class: "footer-logo-name"
+          .footer-lines-between-title-description
+          p.footer-description
+            | Организация и проведение детских праздников
+        .col-xs-3.footer-social-icons
+        .col-xs-5.footer-phones
+          = image_tag("footer_monkey.png", class: "img-responsive footer-img-monkey")
+          .footer-numbers-and-icons
+            .footer-numbers
+              p
+                | +38 063 267 41 23
+              p
+                | +38 096 515 72 98
+              p
+                | +38 099 437 33 44
+              p
+                = fa_icon "envelope-o"
+                | office@chado.dn.ua
