@@ -27,22 +27,20 @@
       = link_to "узнать больше", "#", class: "btn btn-primary landing-page__btn-learn-more"
 
 .col-xs-12.landing-page__shows
-  #myCarousel.carousel.slide
-    .carousel-inner
-      - @perfomances.each_with_index do |perfomance, index|
-        .item{ class= "#{ "active" if index == 0 }"}
-          .col-md-5ths.col-xs-6.landing-page__describe-each-show
-            = image_tag(perfomance.image, class: "img-show-desc img-responsive")
-            = link_to perfomance_path(perfomance), class: "landing-page__title-show center-block"
-              = perfomance.title
-            .landing-page__text-show
-              = perfomance.text.html_safe
-            = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block landing-page__btn-shows-wrap-learn-more"
-
-    a.left.carousel-control data-slide="prev" href="#myCarousel" 
-      i.glyphicon.glyphicon-chevron-left
-    a.right.carousel-control data-slide="next" href="#myCarousel" 
-      i.glyphicon.glyphicon-chevron-right
+  a.btn.prev
+    i.glyphicon.glyphicon-chevron-left
+  .landing-page__carousel
+    #owl-carousel
+      - @perfomances.each do |perfomance|
+        .landing-page__describe-each-show
+          = image_tag(perfomance.image, class: "img-show-desc img-responsive")
+          = link_to perfomance_path(perfomance), class: "landing-page__title-show center-block"
+            = perfomance.title
+          .landing-page__text-show
+            = perfomance.text.html_safe
+          = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block landing-page__btn-shows-wrap-learn-more"
+  a.btn.next
+    i.glyphicon.glyphicon-chevron-right
 
 .col-xs-12.landing-page__main-wrap-candy-bar
   .col-xs-6.landing-page__image-1
