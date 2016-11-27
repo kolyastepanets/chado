@@ -27,8 +27,8 @@
       = link_to "узнать больше", "#", class: "btn btn-primary landing-page__btn-learn-more"
 
 .col-xs-12.landing-page__shows
-  a.btn.prev
-    i.glyphicon.glyphicon-chevron-left
+  div.btn.prev
+    i.fa.fa-chevron-left
   .landing-page__carousel
     #owl-carousel
       - @perfomances.each do |perfomance|
@@ -39,8 +39,8 @@
           .landing-page__text-show
             = perfomance.text.html_safe
           = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block landing-page__btn-shows-wrap-learn-more"
-  a.btn.next
-    i.glyphicon.glyphicon-chevron-right
+  div.btn.next
+    i.fa.fa-chevron-right
 
 .col-xs-12.landing-page__main-wrap-candy-bar
   .col-xs-6.landing-page__image-1

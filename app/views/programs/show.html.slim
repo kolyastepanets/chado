@@ -1,2 +1,9 @@
-h1 Programs#show
-p Find me in app/views/programs/show.html.slim
+.row.perfomance-page__main-wrap
+  .col-xs-12
+    p.perfomance-page__wrap-title
+      = @program.title
+  .col-xs-4
+    = image_tag(@program.image, class: "perfomance-page__main-image img-responsive")
+  .col-xs-8.perfomance-page__wrap-text
+    p
+      = @program.text.html_safe

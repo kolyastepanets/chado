@@ -42,7 +42,7 @@
   }
   @media (max-width:560px) {
     font-size: 14px;
-    width: 200%;
+    width: 180%;
     margin-top: 20%;
   }
 }
@@ -74,7 +74,10 @@
 .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus {
   background-color: #07773E;
 }
-.landing-page__btn-shows-wrap-learn-more:hover {
+.landing-page__btn-shows-wrap-learn-more:hover,
+.landing-page__btn-shows-wrap-learn-more:active:hover,
+.landing-page__btn-shows-wrap-learn-more:active:focus,
+.landing-page__btn-shows-wrap-learn-more:active.focus {
   background-color: #b48484;
 }
 .landing-page__show-programs-text p {
@@ -119,7 +122,7 @@
   margin-top: 1%;
   @media (max-width:990px) {
     font-size: 20px;
-    width: 100%;
+    width: 90%;
   }
   @media (max-width:767px) {
     font-size: 14px;
@@ -135,32 +138,18 @@
   background: linear-gradient(#f5b2b6, white);
   padding: 0;
 }
-.carousel-inner {
-  > .item{
-    /*transition: transform 0.2s;*/
-  }
-}
-.carousel-inner {
-  > .item.active{
-    /*transform: translate(0, 0);*/
-  }
-}
 .owl-controls {
   display: none !important;
 }
 .landing-page__carousel {
-  width: 90%;
-  margin: 0 auto;
+  width: 80%;
+  float: left;
 }
 .landing-page__describe-each-show {
   height: 400px;
   margin-top: 3%;
-  /*width: 18%;*/
   @media (min-width:990px) and (max-width:1024px) {
     height: 490px;
-  }
-  @media (max-width:990px) {
-    width: 45%;
   }
   @media (max-width:767px) {
     height: 380px;
@@ -168,6 +157,31 @@
 }
 .landing-page__describe-each-show:first-child {
   margin-left: 4%;
+}
+div.btn.prev {
+  @media (min-width:1024px) {
+    margin-left: 40px;
+  }
+  @media (min-width:1200px) {
+    margin-left: 60px;
+  }
+}
+div.btn.prev, div.btn.next {
+  float: left;
+  margin-top: 130px;
+}
+.fa-chevron-left, .fa-chevron-right {
+  font-size: 50px !important;
+  color: #EE787D !important;
+  @media (max-width:568px) {
+    font-size: 40px !important;
+  }
+  @media (max-width:425px) {
+    font-size: 15px !important;
+  }
+  @media (max-width:320px) {
+    font-size: 7px !important;
+  }
 }
 .landing-page__title-show {
   color: #EE787D;
@@ -196,22 +210,6 @@
   margin: 0 auto;
   border: 5px solid white;
   max-width: 130px;
-}
-.carousel-inner .active.left {
-  left: -25%;
-}
-.carousel-inner .next {
-  left: 25%;
-}
-.carousel-inner .prev {
-  left: -25%;
-}
-.carousel-control {
-  width: 4%;
-}
-.carousel-control.left,.carousel-control.right {
-  margin-left: 15px;
-  background-image: none;
 }
 .landing-page__image-1 {
   margin-top: 4%;
