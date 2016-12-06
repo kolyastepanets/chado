@@ -1,0 +1,235 @@
+body {
+  font-family: 'CooperBlack';
+}
+.main-container {
+  margin-top: 80px;
+}
+.navigation-bar {
+  background-color: #A1E396;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 0 0 15px 15px;
+  border: none;
+}
+.container-nav-bar {
+  margin: 0;
+}
+.main-page__header-numbers {
+  background-color: white;
+  color: #A1E396;
+  padding-right: 0;
+  width: 100%;
+  text-align: right;
+  span {
+    margin-left: 20px;
+    @media (min-width: 861px) and (max-width: 925px) {
+      font-size: 12px;
+    }
+    @media (min-width: 768px) and (max-width: 860px) {
+      font-size: 10px;
+    }
+  }
+}
+.navbar-brand {
+  padding: 0;
+  height: 25px !important;
+}
+.navbar-brand__visible-for-tablet {
+  padding: 0;
+  height: 30px;
+}
+.navbar-right {
+  @media (min-width: 1200px) and (max-width: 1280px) {
+    margin-right: 70px !important;
+  }
+  @media (min-width: 992px) and (max-width: 1070px) {
+    margin-right: 50px !important;
+  }
+  @media (min-width: 768px) and (max-width: 820px) {
+    margin-right: 30px !important;
+  }
+}
+.logo-img {
+  width: 180px;
+}
+.name-brand-logo {
+  color: #07773E !important;
+  padding-top: 15px;
+  padding-left: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 120px;
+  @media (max-width: 768px) {
+    padding-top: 0;
+    margin-left: 65px;
+  }
+}
+.name-brand-logo:hover {
+  text-decoration: none;
+}
+.navbar-default .navbar-nav > li > a {
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: #07773E;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  margin-top: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar-default .navbar-toggle {
+  background-color: #ddd;
+}
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.col-xs-5ths {
+  width: 20%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+.footer {
+  height: 180px;
+  background-color: #A1E396;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 15px 15px 0 0;
+}
+.footer-container {
+  margin-right: 0;
+  padding-right: 0;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+}
+.footer-phones {
+  padding-right: 0;
+}
+.footer-img-monkey {
+  float: right;
+  @media (max-width: 586px) {
+    width: 100px;
+  }
+  @media (max-width: 525px) {
+    width: 90px;
+  }
+  @media (max-width: 425px) {
+    width: 70px;
+  }
+}
+.footer-numbers {
+  float: right;
+  margin-top: 3%;
+  @media (min-width: 900px) {
+    margin-right: 10%;
+  }
+  @media (max-width: 768px) {
+    margin-top: 6%;
+    margin-right: 6%;
+  }
+  @media (max-width: 425px) {
+    margin-top: 25%;
+  }
+  @media (max-width: 385px) {
+    margin-top: 0;
+    margin-right: 15%;
+  }
+  p {
+    margin: 0;
+    font-size: 25px;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+    @media (max-width: 508px) {
+      font-size: 13px;
+    }
+    &:last-child {
+      font-size: 19px;
+      margin-left: 5px;
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
+      @media (max-width: 508px) {
+        font-size: 9px;
+      }
+    }
+  }
+}
+.footer-left-part {
+  margin-top: 2%;
+}
+.footer-logo-name {
+  color: #07773E;
+  font-size: 50px;
+  margin: 0;
+  @media (max-width: 425px) {
+    font-size: 30px;
+  }
+  @media (max-width: 768px) {
+    font-size: 35px;
+  }
+  &:hover{
+    color: #07773E;
+    text-decoration: none;
+  }
+}
+.footer-lines-between-title-description {
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  height: 12px;
+  margin-top: -7px;
+  min-width: 100px;
+}
+.footer-description {
+  margin-top: 3px;
+  letter-spacing: 1px;
+  font-size: 21px;
+  line-height: 21px;
+  @media (max-width: 768px) {
+    margin-top: 3px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 16px;
+  }
+  @media (max-width: 507px) {
+    font-size: 13px;
+  }
+  @media (max-width: 445px) {
+    font-size: 10px;
+  }
+}
+.fa.fa-envelope-o {
+  margin-right: 3px;
+}

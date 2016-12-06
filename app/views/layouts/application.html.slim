@@ -1,0 +1,76 @@
+doctype html
+html
+  head
+    title
+      | Chado
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true, cache: true
+    = csrf_meta_tags
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    - if content_for?(:head)
+      = yield(:head)
+  body
+    .container-fluid
+      .row.main-container
+        nav.navigation-bar.navbar.navbar-default.navbar-fixed-top
+          .container.container-nav-bar.main-page__header-numbers.hidden-xs
+            .navbar-header
+              = link_to root_path, class:"navbar-brand hidden-xs"
+                = image_tag("logo_new_year.png", class: "logo-img")
+            span.main-page__header-number
+              = fa_icon "envelope-o"
+              | office@chado.dp.ua
+            span.main-page__header-number
+              | +38 063 267 41 23
+            span.main-page__header-number
+              | +38 096 515 72 98
+            span.main-page__header-number
+              | +38 099 437 33 44
+          .container.container-nav-bar
+            .navbar-header
+              button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"]
+                span.sr-only
+                  | Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              = link_to root_path, class:"navbar-brand__visible-for-tablet visible-xs-block"
+                = image_tag("logo.png", class: "logo-img")
+              span.navbar-brand.name-brand-logo
+                = link_to "Чадо", root_path, class: "name-brand-logo"
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+              ul.nav.navbar-nav.navbar-right
+                li
+                  = link_to "Аниматоры", programs_path
+                li
+                  = link_to "Шоу", perfomances_path
+                li
+                  a[href="#"]
+                    | Candy Bar
+                li
+                  a[href="#"]
+                    | Дополнения
+                li
+                  a[href="#"]
+                    | Контакты
+        = yield
+    footer.footer
+      .container.footer-container
+        .col-xs-4.footer-left-part
+          div
+            = link_to "Чадо", root_path, class: "footer-logo-name"
+          .footer-lines-between-title-description
+          p.footer-description
+            | Организация и проведение детских праздников
+        .col-xs-8.footer-phones
+          = image_tag("footer_monkey.png", class: "img-responsive footer-img-monkey")
+          .footer-numbers
+            p
+              | +38 063 267 41 23
+            p
+              | +38 096 515 72 98
+            p
+              | +38 099 437 33 44
+            p
+              = fa_icon "envelope-o"
+              | office@chado.dp.ua

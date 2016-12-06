@@ -1,0 +1,13 @@
+.row.perfomance-page__main-perfomances
+  .col-xs-12
+    p.perfomance-page__main-perfomances-title
+      | Шоу-программы
+  - @perfomances.each do |perfomance|
+    .col-md-5ths.col-xs-6.perfomances-page__describe-each-show
+      = link_to perfomance_path(perfomance)
+        = image_tag(perfomance.image, class: "img-show-desc img-responsive")
+      = link_to perfomance_path(perfomance), class: "perfomances-page__title-show center-block"
+        = perfomance.title
+      .perfomances-page__text-show
+        = perfomance.text.html_safe
+      = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block perfomances-page__btn-learn-more"

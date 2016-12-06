@@ -1,0 +1,86 @@
+.perfomance-page__main-wrap {
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 5%;
+  @media (min-width:767px) and (max-width:1024px) {
+    margin-top: 10%;
+  }
+}
+.perfomance-page__main-perfomances {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.perfomance-page__main-perfomances-title {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+.perfomance-page__main-image {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.perfomance-page__wrap-title {
+  font-size: 35px;
+  text-align: center;
+  @media (max-width:560px) {
+    font-size: 17px;
+  }
+}
+.perfomance-page__wrap-text {
+  margin-top: 3%;
+  font-size: 19px;
+  @media (max-width:560px) {
+    font-size: 14px;
+  }
+}
+.perfomances-page__describe-each-show {
+  height: 400px;
+  margin-top: 4%;
+  @media (min-width:990px) and (max-width:1024px) {
+    height: 490px;
+  }
+  @media (max-width:990px) {
+    width: 50%;
+  }
+  @media (max-width:767px) {
+    height: 480px;
+  }
+}
+.perfomances-page__text-show {
+  text-align: center;
+  min-height: 80px;
+  @media (max-width:767px) {
+    font-size: 12px;
+    min-height: 225px;
+  }
+}
+.perfomances-page__btn-learn-more {
+  margin-top: 3%;
+  background-color: #A1E396;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  white-space: normal;
+  @media (max-width:767px) {
+    max-width: 100%;
+  }
+}
+.perfomances-page__btn-learn-more:hover,
+.perfomances-page__btn-learn-more:active:hover,
+.perfomances-page__btn-learn-more:active:focus,
+.perfomances-page__btn-learn-more:active.focus {
+  background-color: #07773E;
+}
+.perfomances-page__title-show {
+  color: gray;
+  text-align: center;
+  font-size: 18px;
+  min-height: 50px;
+  @media (max-width:767px) {
+    font-size: 16px;
+    word-wrap: break-word;
+    min-height: 45px;
+  }
+}
