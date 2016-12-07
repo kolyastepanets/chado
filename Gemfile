@@ -16,6 +16,10 @@ gem 'rails_admin'
 gem 'devise'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem "font-awesome-rails"
+gem 'dotenv'
+gem 'dotenv-deployment', require: 'dotenv/deployment'
+gem 'therubyracer'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
@@ -33,4 +37,12 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 3.1'
+end
+
+group :development do
+  gem 'capistrano', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
 end
