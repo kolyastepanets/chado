@@ -16,10 +16,10 @@ gem 'rails_admin'
 gem 'devise'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem "font-awesome-rails"
-gem 'dotenv'
-gem 'dotenv-deployment', require: 'dotenv/deployment'
 gem 'therubyracer'
 gem 'puma'
+gem 'unicorn'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
@@ -45,4 +45,5 @@ group :development do
   gem 'capistrano-rails', require: false
   gem 'capistrano-rvm', require: false
   gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
+  gem 'capistrano3-unicorn', require: false
 end
