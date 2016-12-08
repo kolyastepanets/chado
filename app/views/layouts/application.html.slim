@@ -4,10 +4,11 @@ html
     title
       | Chado
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true, cache: true, async: Rails.env.production?
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true, cache: true
     meta content="tAhYWmoS_KJlEv-Gddso9wjjC8SwnEDFngEfkONehwQ" name="google-site-verification"
     = csrf_meta_tags
     meta name="viewport" content="width=device-width, initial-scale=1"
+    = favicon_link_tag 'favicon.png'
     - if content_for?(:head)
       = yield(:head)
   body
