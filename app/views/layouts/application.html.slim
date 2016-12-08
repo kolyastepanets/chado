@@ -4,7 +4,7 @@ html
     title
       | Chado
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true, cache: true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true, cache: true, async: Rails.env.production?
     meta content="tAhYWmoS_KJlEv-Gddso9wjjC8SwnEDFngEfkONehwQ" name="google-site-verification"
     = csrf_meta_tags
     meta name="viewport" content="width=device-width, initial-scale=1"
@@ -36,7 +36,7 @@ html
                 span.icon-bar
                 span.icon-bar
               = link_to root_path, class:"navbar-brand__visible-for-tablet visible-xs-block"
-                = image_tag("logo.png", class: "logo-img")
+                = image_tag("logo_new_year.png", class: "logo-img")
               span.navbar-brand.name-brand-logo
                 = link_to "Чадо", root_path, class: "name-brand-logo"
             #bs-example-navbar-collapse-1.collapse.navbar-collapse
