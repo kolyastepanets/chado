@@ -53,8 +53,7 @@ html
                   a[href="#"]
                     | Дополнения
                 li
-                  a[href="#"]
-                    | Контакты
+                  = link_to "Контакты", contacts_path
         = yield
     footer.footer
       .container.footer-container

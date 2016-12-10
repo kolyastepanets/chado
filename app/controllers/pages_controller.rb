@@ -3,4 +3,7 @@ class PagesController < ApplicationController
     @perfomances = Perfomance.all
     @week_action = WeekAction.first
   end
+
+  def contacts
+  end
 end

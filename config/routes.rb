@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :perfomances, only: [:index, :show]
 
   root 'pages#landing'
+  get "contacts", to: "pages#contacts", as: "contacts"
 end
