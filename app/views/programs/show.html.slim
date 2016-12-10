@@ -3,4 +3,4 @@
     p.perfomance-page__wrap-title
       = @program.title
   .col-xs-4
-    = image_tag(@program.image, class: "perfomance-page__main-image img-responsive")
+    = image_tag(@program.image_url(:main), class: "perfomance-page__main-image img-responsive")

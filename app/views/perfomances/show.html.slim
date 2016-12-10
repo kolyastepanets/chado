@@ -3,7 +3,7 @@
     p.perfomance-page__wrap-title
       = @perfomance.title
   .col-xs-4
-    = image_tag(@perfomance.image, class: "perfomance-page__main-image img-responsive")
+    = image_tag(@perfomance.image_url(:main), class: "perfomance-page__main-image img-responsive")
   .col-xs-8.perfomance-page__wrap-text
     p
       = @perfomance.text.html_safe
