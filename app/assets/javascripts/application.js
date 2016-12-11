@@ -16,4 +16,5 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require owl-carousel
+//= require lightgallery
 //= require_tree .

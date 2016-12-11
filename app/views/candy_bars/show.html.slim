@@ -1,0 +1,13 @@
+.row.candy-bars-page__main-row
+  .col-xs-12
+    h1
+      = @candy_bar.title
+  .col-xs-4
+    ul#imageGallery
+      - @candy_bar.candy_bar_images.each do |img|
+        li data-thumb="#{img.file_url(:thumb)}"
+          = image_tag(img.file_url(:main), class: "img-responsive")
+
+  .col-xs-8
+    p
+      = @candy_bar.text.html_safe
