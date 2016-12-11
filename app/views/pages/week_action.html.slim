@@ -1,0 +1,10 @@
+.col-xs-12.landing-page__wrap-week-action-1
+  - if @week_action
+    p.landing-page__week-action
+      = image_tag("wave_left.png", class: "landing-page__image-waves img-responsive")
+      span
+        = @week_action.title
+      = image_tag("wave_right.png", class: "landing-page__image-waves img-responsive")
+    .landing-page__week-action-text
+      p
+        = @week_action.text

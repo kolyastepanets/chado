@@ -6,4 +6,8 @@ class PagesController < ApplicationController
 
   def contacts
   end
+
+  def week_action
+    @week_action = WeekAction.first
+  end
 end
