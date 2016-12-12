@@ -4,7 +4,7 @@
       = @candy_bar.title
   .col-xs-5
     ul#imageGallery
-      - @candy_bar.candy_bar_images.each do |img|
+      - @candy_bar.images.each do |img|
         li data-thumb="#{img.file_url(:thumb)}"
           = image_tag(img.file_url(:main), class: "img-responsive")
 

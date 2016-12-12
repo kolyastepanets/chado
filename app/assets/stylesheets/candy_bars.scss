@@ -8,4 +8,7 @@
 }
 .candy-bars__boy-or-girl {
   display: inherit;
+  @media (max-width:650px) {
+    width: 50%;
+  }
 }
