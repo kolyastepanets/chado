@@ -4,3 +4,14 @@
   border: 5px solid white;
   max-width: 180px;
 }
+.program__text-description {
+  padding-left: 5%;
+  margin-top: 5%;
+}
+.programs-page__describe-each-show {
+  height: 250px;
+  margin-top: 4%;
+  @media (max-width:990px) {
+    width: 50%;
+  }
+}
