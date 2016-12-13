@@ -3,10 +3,11 @@
     h1
       = @candy_bar.title
   .col-xs-5
-    ul#imageGallery
-      - @candy_bar.images.each do |img|
-        li data-thumb="#{img.file_url(:thumb)}"
-          = image_tag(img.file_url(:main), class: "img-responsive")
+    = image_tag(@candy_bar.images.first.file_url(:main), class: "img-responsive")
+    .parent-container
+      - @candy_bar.images.each do |image|
+        a href="#{image.file_url(:big)}"
+          = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
 
   .col-xs-7
     p

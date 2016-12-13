@@ -4,6 +4,10 @@
       = @perfomance.title
   .col-xs-4
     = image_tag(@perfomance.image_url(:main), class: "perfomance-page__main-image img-responsive")
+    .parent-container
+      - @perfomance.images.each do |image|
+        a href="#{image.file_url(:big)}"
+          = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
   .col-xs-8.perfomance-page__wrap-text
     p
       = @perfomance.text.html_safe

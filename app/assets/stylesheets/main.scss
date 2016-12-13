@@ -244,3 +244,10 @@ body {
 .fa.fa-envelope-o {
   margin-right: 3px;
 }
+.small-img-preview {
+  float: left;
+  margin-left: 1%;
+}
+.mfp-figure:after {
+  content: none !important;
+}

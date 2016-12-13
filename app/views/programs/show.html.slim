@@ -2,7 +2,11 @@
   .col-xs-12
     p.perfomance-page__wrap-title
       = @program.title
-  .col-xs-4
+  .col-xs-5
     = image_tag(@program.image_url(:main), class: "perfomance-page__main-image img-responsive")
+    .parent-container
+      - @program.images.each do |image|
+        a href="#{image.file_url(:big)}"
+          = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
   .col-xs-7.program__text-description
     = @program.text.html_safe
