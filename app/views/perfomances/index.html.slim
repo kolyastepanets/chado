@@ -9,5 +9,5 @@
       = link_to perfomance_path(perfomance), class: "perfomances-page__title-show center-block"
         = perfomance.title
       .perfomances-page__text-show
-        = perfomance.text.html_safe
+        = perfomance.preview_text.try(:html_safe)
       = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block perfomances-page__btn-learn-more"

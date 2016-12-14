@@ -10,4 +10,5 @@
           = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
   .col-xs-8.perfomance-page__wrap-text
     p
+      = @perfomance.preview_text.try(:html_safe)
       = @perfomance.text.html_safe
