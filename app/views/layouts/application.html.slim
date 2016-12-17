@@ -12,23 +12,9 @@ html
     - if content_for?(:head)
       = yield(:head)
   body
-    .container-fluid
+    .container-fluid.wrapper
       .row.main-container
         nav.navigation-bar.navbar.navbar-default.navbar-fixed-top
-          .container.container-nav-bar.main-page__header-numbers.hidden-xs
-            .navbar-header
-              = link_to root_path, class:"navbar-brand hidden-xs"
-                = image_tag("logo_new_year.png", class: "logo-img")
-            .main-page__header-numbers-and-email
-              span.main-page__header-number
-                = fa_icon "envelope-o"
-                | office@chado.dp.ua
-              span.main-page__header-number
-                | +38 063 267 41 23
-              span.main-page__header-number
-                | +38 096 515 72 98
-              span.main-page__header-number
-                | +38 099 437 33 44
           .container.container-nav-bar
             .navbar-header
               button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"]
@@ -37,7 +23,7 @@ html
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
-              = link_to root_path, class:"navbar-brand__visible-for-tablet visible-xs-block"
+              = link_to root_path, class:"navbar-brand"
                 = image_tag("logo_new_year.png", class: "logo-img")
               span.navbar-brand.name-brand-logo
                 = link_to "Чадо", root_path, class: "name-brand-logo"
@@ -75,3 +61,8 @@ html
             p
               = fa_icon "envelope-o"
               | office@chado.dp.ua
+          .footer-social-icons
+            a[href="https://instagram.com/chado.dnepr" target="_blank" class="social-btn"]
+              = image_tag("instagram.png", class: "img-responsive")
+            a[href="https://vk.com/chado.dnepr" target="_blank" class="social-btn"]
+              = image_tag("vk.png", class: "img-responsive")

@@ -2,9 +2,13 @@
   .col-xs-12
     p.perfomance-page__main-perfomances-title
       | Аниматоры
-  - @programs.each do |program|
-    .col-md-5ths.col-xs-6.programs-page__describe-each-show
-      = link_to program_path(program)
-        = image_tag(program.image_url(:thumb), class: "img-program-desc img-responsive")
-      = link_to program_path(program), class: "perfomances-page__title-show center-block"
-        = program.title
+    - @programs.each do |program|
+      .col-md-5ths.col-xs-6.programs-page__describe-each-show
+        = link_to program_path(program)
+          = image_tag(program.image_url(:thumb), class: "img-program-desc img-responsive")
+        = link_to program_path(program), class: "perfomances-page__title-show center-block"
+          = program.title
+  h4.perfomance-page__animator-not-found
+    | Уважаемые гости, если Вы не нашли интересующую вас программу - звоните.
+  h4.perfomance-page__animator-not-found
+    | Мы отыщем для Вас любых героев

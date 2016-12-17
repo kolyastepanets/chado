@@ -7,10 +7,7 @@
         | Анимация для детей
     .landing-page__show-programs-description
       p
-        | Наши профессиональные актеры-аниматоры 
-        | разнообразят любой праздник. 
-        | В игровой форме донесут до деток правила 
-        | этикета, научат правильному распорядку дня.
+        | Наши профессиональные актеры-аниматоры разнообразят любой праздник. Превратят его в интересную и магическую сказку, где царит веселье и детская дружба
       = link_to "узнать больше", programs_path, class: "btn btn-primary landing-page__btn-learn-more"
   .col-xs-5
     = image_tag("monkey.png", class: "landing-page__show-monkey-landing-page img-responsive")
@@ -23,7 +20,7 @@
       = image_tag("wave_right.png", class: "landing-page__image-waves img-responsive")
     .landing-page__week-action-text
       p
-        = @week_action.text
+        = @week_action.preview_text
       = link_to "узнать больше", week_action_path, class: "btn btn-primary landing-page__btn-learn-more"
 
 .col-xs-12.landing-page__shows

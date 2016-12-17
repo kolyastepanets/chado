@@ -36,17 +36,20 @@
   text-align: center;
   @media (max-width:990px) {
     font-size: 20px;
-    width: 100%;
+    width: 90%;
   }
   @media (min-width:567px) and (max-width:767px) {
     font-size: 14px;
-    width: 100%;
+    width: 90%;
     margin-top: 5%;
   }
   @media (max-width:560px) {
     font-size: 14px;
-    width: 180%;
+    width: 110%;
     margin-top: 20%;
+  }
+  @media (max-width:474px) {
+    width: 180%;
   }
 }
 .landing-page__btn-learn-more {
@@ -94,7 +97,7 @@
 }
 .landing-page__week-action {
   color: #07773E;
-  font-size: 40px;
+  font-size: 26px;
   margin: 5% auto 0 auto;
   text-align: center;
   @media (max-width:990px) {
@@ -108,7 +111,7 @@
   }
 }
 .landing-page__image-waves {
-  width: 250px;
+  width: 190px;
   display: inline-block;
   @media (max-width:990px) {
     width: 170px;
@@ -124,15 +127,15 @@
   text-align: center;
   width: 50%;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 15px;
   margin-top: 1%;
   @media (max-width:990px) {
-    font-size: 20px;
+    font-size: 15px;
     width: 90%;
   }
   @media (max-width:767px) {
     font-size: 14px;
-    width: 100%;
+    width: 90%;
     margin-top: 5%;
   }
 }
@@ -153,13 +156,13 @@
   margin-top: 2%;
 }
 .landing-page__describe-each-show {
-  height: 400px;
+  height: 300px;
   margin-top: 3%;
   @media (min-width:990px) and (max-width:1024px) {
-    height: 490px;
+    height: 270px;
   }
   @media (max-width:767px) {
-    height: 380px;
+    height: 250px;
   }
 }
 .landing-page__describe-each-show:first-child {
