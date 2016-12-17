@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :programs, only: [:index, :show]
   resources :perfomances, only: [:index, :show]
   resources :candy_bars, only: [:index, :show]
+  resources :additional_services, only: [:index, :show]
 
   root 'pages#landing'
   get "contacts", to: "pages#contacts", as: "contacts"

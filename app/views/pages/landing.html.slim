@@ -25,7 +25,7 @@
 
 .col-xs-12.landing-page__shows
   div.btn.prev
-    i.fa.fa-chevron-left
+    i.fa.fa-chevron-left.landing-page__fa-left
   .landing-page__carousel
     #owl-carousel
       - @perfomances.each do |perfomance|
@@ -36,7 +36,7 @@
             = perfomance.title
           = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block landing-page__btn-shows-wrap-learn-more"
   div.btn.next
-    i.fa.fa-chevron-right
+    i.fa.fa-chevron-right.landing-page__fa-right
 
 .col-xs-12.landing-page__main-wrap-candy-bar
   .col-xs-6.landing-page__image-1
@@ -54,3 +54,15 @@
       | Оформление праздничных тематических Candy Bar для создания яркого настроения
 
     = link_to "узнать больше", candy_bars_path, class: "btn btn-primary landing-page__btn-learn-more center-block"
+
+.col-xs-12.landing-page__main-wrap-additional-services
+  h1.landing-page__title-additional-services.text-center
+    | Дополнительные услуги
+  - @additional_services.each do |additional_service|
+    .col-xs-12.col-sm-6.col-lg-4.landing-page__each-additional-service
+      = link_to additional_service_path(additional_service)
+        = image_tag(additional_service.image_url(:thumb), class: "landing-page__image-additional-service img-responsive")
+      p.landing-page__title-additional-service
+        = additional_service.title
+  .col-xs-12
+    = link_to "узнать больше", additional_services_path, class: "btn btn-primary landing-page__btn-learn-more btn-additional-service center-block"

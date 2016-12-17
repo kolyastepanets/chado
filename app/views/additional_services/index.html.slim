@@ -1,0 +1,9 @@
+.col-xs-12.landing-page__main-wrap-additional-services
+  h1.additional_services-page__main-wrap-additional-services.text-center
+    | Дополнительные услуги
+  - @additional_services.each do |additional_service|
+    .col-xs-12.col-sm-6.col-lg-4.landing-page__each-additional-service
+      = link_to additional_service_path(additional_service)
+        = image_tag(additional_service.image_url(:thumb), class: "landing-page__image-additional-service img-responsive")
+      p.landing-page__title-additional-service
+        = additional_service.title

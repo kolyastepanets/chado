@@ -134,14 +134,14 @@ body {
   }
 }
 .footer {
-  background-color: #A1E396;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 5%;
-  border-radius: 15px 15px 0 0;
   height: 160px;
 }
 .footer-container {
+  border-radius: 15px 15px 0 0;
+  background-color: #A1E396;
   margin-right: 0;
   padding-right: 0;
   color: white;
@@ -201,7 +201,7 @@ body {
   max-height: 100px;
   @media (min-width: 315px) and (max-width: 640px) {
     max-height: 100px;
-    margin-left: 20%;
+    margin-left: 15%;
     position: absolute;
     width: 100px;
     bottom: 110px;
@@ -299,4 +299,15 @@ body {
   position: absolute;
   top: 0;
   margin-left: 70%;
+}
+#owl-carousel-under-photo {
+  width: 320px;
+  float: left;
+}
+.btn-prev, .btn-next {
+  float: left;
+  margin-top: 2%;
+}
+.btn-next {
+  padding-left: 0;
 }
