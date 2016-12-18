@@ -12,7 +12,7 @@ html
     - if content_for?(:head)
       = yield(:head)
   body
-    .container-fluid.wrapper
+    .container-fluid.wrapper[style=background]
       .row.main-container
         nav.navigation-bar.navbar.navbar-default.navbar-fixed-top
           .container.container-nav-bar
@@ -40,28 +40,28 @@ html
                 li
                   = link_to "Контакты", contacts_path
         = yield
-    footer.footer
-      .container.footer-container
-        .col-xs-4.footer-left-part
-          div
-            = link_to "Чадо", root_path, class: "footer-logo-name"
-          .footer-lines-between-title-description
-          p.footer-description
-            | Организация и проведение детских праздников
-        .col-xs-8.footer-phones
-          = image_tag("footer_monkey2.png", class: "img-responsive footer-img-monkey")
-          .footer-numbers
-            p
-              | +38 063 267 41 23
-            p
-              | +38 096 515 72 98
-            p
-              | +38 099 437 33 44
-            p
-              = fa_icon "envelope-o"
-              | office@chado.dp.ua
-          .footer-social-icons
-            a[href="https://instagram.com/chado.dnepr" target="_blank" class="social-btn"]
-              = image_tag("instagram.png", class: "img-responsive")
-            a[href="https://vk.com/chado.dnepr" target="_blank" class="social-btn"]
-              = image_tag("vk.png", class: "img-responsive")
+      footer.footer
+        .container.footer-container
+          .col-xs-4.footer-left-part
+            div
+              = link_to "Чадо", root_path, class: "footer-logo-name"
+            .footer-lines-between-title-description
+            p.footer-description
+              | Организация и проведение детских праздников
+          .col-xs-8.footer-phones
+            = image_tag("footer_monkey2.png", class: "img-responsive footer-img-monkey")
+            .footer-numbers
+              p
+                | +38 063 267 41 23
+              p
+                | +38 096 515 72 98
+              p
+                | +38 099 437 33 44
+              p
+                = fa_icon "envelope-o"
+                | office@chado.dp.ua
+            .footer-social-icons
+              a[href="https://instagram.com/chado.dnepr" target="_blank" class="social-btn"]
+                = image_tag("instagram.png", class: "img-responsive")
+              a[href="https://vk.com/chado.dnepr" target="_blank" class="social-btn"]
+                = image_tag("vk.png", class: "img-responsive")

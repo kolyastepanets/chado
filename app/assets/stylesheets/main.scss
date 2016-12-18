@@ -7,9 +7,7 @@ body {
   height: 100%;
 }
 .wrapper {
-  min-height: 100%;
   height: auto !important;
-  height: 100%;
 }
 .main-container {
   margin-top: 80px;
@@ -134,8 +132,8 @@ body {
   }
 }
 .footer {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 4%;
+  margin-right: 4%;
   margin-top: 5%;
   height: 160px;
 }
@@ -166,6 +164,10 @@ body {
   @media (min-width: 900px) {
     margin-right: 10%;
   }
+  @media (min-width: 768px) {
+    margin-right: 5%;
+    margin-top: 8%;
+  }
   @media (max-width: 640px) {
     margin-top: 15%;
   }
@@ -189,7 +191,7 @@ body {
       font-size: 15px;
       margin-left: 5px;
       @media (max-width: 768px) {
-        font-size: 13px;
+        font-size: 12px;
       }
       @media (max-width: 360px) {
         font-size: 9px;
@@ -204,10 +206,7 @@ body {
     margin-left: 15%;
     position: absolute;
     width: 100px;
-    bottom: 110px;
-  }
-  @media (max-width: 586px) {
-    bottom: 80px;
+    bottom: 90px;
   }
 }
 .footer-left-part {
@@ -271,7 +270,7 @@ body {
 .social-btn {
   display: inline-block;
   margin-left: 20%;
-  margin-top: 70px;
+  margin-top: 90px;
   &:last-child {
     margin-left: 1%;
   }
@@ -282,8 +281,9 @@ body {
     margin-left: 5%;
   }
   @media (max-width: 790px) {
-    margin-left: 0%;
+    margin-left: 5%;
     width: 30px;
+    margin-top: 80px;
   }
   @media (max-width: 764px) {
     width: 30px;
@@ -303,10 +303,11 @@ body {
 #owl-carousel-under-photo {
   width: 320px;
   float: left;
+  margin-top: 2%;
 }
 .btn-prev, .btn-next {
   float: left;
-  margin-top: 2%;
+  margin-top: 4%;
 }
 .btn-next {
   padding-left: 0;
