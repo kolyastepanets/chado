@@ -2,19 +2,20 @@
   .col-xs-12
     p.perfomance-page__wrap-title
       = @perfomance.title
-  .col-xs-5
+  .col-xs-12.col-md-5
     = image_tag(@perfomance.image_url(:main), class: "perfomance-page__main-image img-responsive")
     - if @perfomance.images.any?
-      div.btn.btn-prev
-        i.fa.fa-chevron-left
-      #owl-carousel-under-photo.parent-container
-        - @perfomance.images.each do |image|
-          a href="#{image.file_url(:big)}"
-            = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
-      div.btn.btn-next
-        i.fa.fa-chevron-right
+      div.wrap-owl-carousel-under-photo
+        div.btn.btn-prev
+          i.fa.fa-chevron-left
+        #owl-carousel-under-photo.parent-container
+          - @perfomance.images.each do |image|
+            a href="#{image.file_url(:big)}"
+              = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
+        div.btn.btn-next
+          i.fa.fa-chevron-right
 
-  .col-xs-7.perfomance-page__wrap-text
+  .col-xs-12.col-md-7.perfomance-page__wrap-text
     p
       = @perfomance.preview_text.try(:html_safe)
       = @perfomance.text.html_safe

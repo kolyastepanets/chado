@@ -10,4 +10,10 @@
   margin-top: 5%;
   margin-bottom: 5%;
   color: #07773E;
+  @media (max-width:768px) {
+    font-size: 29px;
+  }
+  @media (max-width:320px) {
+    font-size: 22px;
+  }
 }

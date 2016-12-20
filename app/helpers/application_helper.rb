@@ -1,7 +1,7 @@
 module ApplicationHelper
   def background
     if background_yellow?
-      "background: linear-gradient(white, yellow, yellow, white);"
+      "background: linear-gradient(white, #FCEE5E, #FCEE5E, white);"
     elsif not_allowed_pages
       ""
     else

@@ -300,10 +300,27 @@ body {
   top: 0;
   margin-left: 70%;
 }
+.wrap-owl-carousel-under-photo {
+  width: 300px;
+  height: 100%;
+  margin: 0 auto;
+  @media (min-width: 1024px) {
+    width: 400px;
+  }
+}
 #owl-carousel-under-photo {
   width: 320px;
   float: left;
   margin-top: 2%;
+  @media (max-width: 1024px) {
+    width: 240px;
+  }
+  @media (max-width: 375px) {
+    width: 190px;
+  }
+  @media (max-width: 320px) {
+    width: 160px;
+  }
 }
 .btn-prev, .btn-next {
   float: left;

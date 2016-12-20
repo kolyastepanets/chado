@@ -2,18 +2,19 @@
   .col-xs-12
     h1
       = @candy_bar.title
-  .col-xs-5
-    = image_tag(@candy_bar.images.first.file_url(:main), class: "img-responsive")
+  .col-xs-12.col-md-5
+    = image_tag(@candy_bar.images.first.file_url(:main), class: "candy-bars-page__img img-responsive")
     - if @candy_bar.images.any?
-      div.btn.btn-prev
-        i.fa.fa-chevron-left
-      #owl-carousel-under-photo.parent-container
-        - @candy_bar.images.each do |image|
-          a href="#{image.file_url(:big)}"
-            = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
-      div.btn.btn-next
-        i.fa.fa-chevron-right
+      div.wrap-owl-carousel-under-photo
+        div.btn.btn-prev
+          i.fa.fa-chevron-left
+        #owl-carousel-under-photo.parent-container
+          - @candy_bar.images.each do |image|
+            a href="#{image.file_url(:big)}"
+              = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
+        div.btn.btn-next
+          i.fa.fa-chevron-right
 
-  .col-xs-7
+  .col-xs-12.col-md-7
     p
       = @candy_bar.text.html_safe

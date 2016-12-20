@@ -2,7 +2,7 @@ document.addEventListener("turbolinks:load", function() {
   var owl = $("#owl-carousel");
   owl.owlCarousel({
     items: 5,
-    autoPlay: true,
+    autoPlay: 2000,
     slideSpeed: 400,
     itemsCustom: [[320,1], [375,2], [667,3], [1000,4], [1200,5]]
   });

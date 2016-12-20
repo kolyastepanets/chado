@@ -1,9 +1,9 @@
 document.addEventListener("turbolinks:load", function() {
   var owl = $("#owl-carousel-under-photo");
   owl.owlCarousel({
-    items: 4,
     autoPlay: false,
-    slideSpeed: 400
+    slideSpeed: 400,
+    itemsCustom: [[320,2], [375,2], [425,3], [1024,3]]
   });
   $(".btn-next").click(function(){
     owl.trigger('owl.next');

@@ -10,7 +10,8 @@
             = image_tag("new.png", class: "new-object img-responsive")
         = link_to program_path(program), class: "perfomances-page__title-show center-block"
           = program.title
-  h4.perfomance-page__animator-not-found
-    | Уважаемые гости, если Вы не нашли интересующую вас программу - звоните.
-  h4.perfomance-page__animator-not-found
-    | Мы отыщем для Вас любых героев
+  .col-xs-12.perfomance-page__animator-not-found
+    h4
+      | Уважаемые гости, если Вы не нашли интересующую вас программу - звоните. 
+      p
+        | Мы отыщем для Вас любых героев
