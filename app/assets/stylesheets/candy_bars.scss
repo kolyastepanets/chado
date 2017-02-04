@@ -6,16 +6,27 @@
   color: #07773E;
   margin-top: 3%;
 }
-.candy-bars__boy-or-girl {
+.candy-bars__1, .candy-bars__2 {
   display: inherit;
-  &:first-child {
-    @media (max-width:800px) {
-      width: 47.5%;
-    }
+  @media (max-width:800px) {
+    width: 47.5%;
   }
   @media (max-width:800px) {
     width: 50%;
   }
+}
+.candy-bars__1 {
+  border-left: 10px solid white;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+  border-radius: 20px 0 0 20px;
+}
+.candy-bars__2 {
+  border-right: 10px solid white;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+  border-radius: 0 20px 20px 0;
+  border-left: 0;
 }
 .candy-bars-page__img {
   margin: 0 auto;
