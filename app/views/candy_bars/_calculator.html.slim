@@ -1,0 +1,98 @@
+.table-responsive
+  table.table
+    thead
+      tr
+        th
+          | Наименование
+        th
+          | Цена
+        th
+          | Кол-во
+    tbody
+      tr
+        td.candy-bar__td-name
+          | Пакет услуг
+        td.candy-bar__td-checkbox-choose-type
+          div
+            = check_box_tag 'price_service_economy', 1000
+            span
+            | Эконом
+          div
+            = check_box_tag 'price_service_lux', 2000
+            span
+            | Люкс
+          div
+            = check_box_tag 'price_service_vip', 3000
+            span
+            | VIP
+        td.candy-bar__th-field_input
+          = text_field_tag 'candy-bar__chosen-plan'
+      tr
+        td.candy-bar__td-name
+          | Торт (мин 3кг)
+        td
+          = @candy_bar.cake
+          |  грн/кг
+        td.candy-bar__th-field_input
+          = text_field_tag 'cake'
+      tr
+        td.candy-bar__td-name
+          | Кап кейк/крем
+        td
+          = @candy_bar.cup_cake_cream
+          |  грн/шт
+        td.candy-bar__th-field_input
+          = text_field_tag 'cup_cake_cream'
+      tr
+        td.candy-bar__td-name
+          | Кап кейк/мастикa
+        td
+          = @candy_bar.cup_cake_mastic
+          |  грн/шт
+        td.candy-bar__th-field_input
+          = text_field_tag 'cup_cake_mastic'
+      tr
+        td.candy-bar__td-name
+          | Пряники
+        td
+          = @candy_bar.gingerbreads
+          |  грн/шт
+        td.candy-bar__th-field_input
+          = text_field_tag 'gingerbreads'
+      tr
+        td.candy-bar__td-name
+          | Кейк попс
+        td
+          = @candy_bar.cake_pops
+          |  грн/шт
+        td.candy-bar__th-field_input
+          = text_field_tag 'cake_pops'
+      tr
+        td.candy-bar__td-name
+          | Зефир
+        td
+          = @candy_bar.zephyr
+          |  грн/шт
+        td.candy-bar__th-field_input
+          = text_field_tag 'zephyr'
+      tr
+        td.candy-bar__td-name
+          | Мармелад
+        td
+          = @candy_bar.jujube
+          |  грн/100гр
+        td.candy-bar__th-field_input
+          = text_field_tag 'jujube'
+      tr
+        td.candy-bar__td-name
+          | Макаро
+        td
+          = @candy_bar.makaro
+          |  грн/шт
+        td.candy-bar__th-field_input
+          = text_field_tag 'makaro'
+      tr
+        td.candy-bar__td-final
+          | Итого: 
+        td.candy-bar__td-empty-field
+        td#results

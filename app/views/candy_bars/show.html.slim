@@ -1,3 +1,5 @@
+script#my_vars_json[type="text/json"]
+  = raw @candy_bar.to_json
 .row.candy-bars-page__main-row
   .col-xs-12
     h1
@@ -14,6 +16,8 @@
               = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
         div.btn.btn-next
           i.fa.fa-chevron-right
+
+    = render "calculator"
 
   .col-xs-12.col-md-7
     p
