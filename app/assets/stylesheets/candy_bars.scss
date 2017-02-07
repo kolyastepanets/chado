@@ -60,6 +60,7 @@ table.table {
     tr {
       td.candy-bar__td-name {
         text-align: left;
+        vertical-align: middle;
       }
       td {
         border: 1px solid white;
@@ -77,6 +78,7 @@ table.table {
 
 }
 td.candy-bar__th-field_input {
+  vertical-align: middle !important;
   input {
     background-color: white;
     width: 70px;

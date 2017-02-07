@@ -1,64 +1,44 @@
 document.addEventListener("turbolinks:load", function() {
-  var candyBarJSON = $("#my_vars_json").html();
-  candyBar = $.parseJSON(candyBarJSON);
-  var cake_price = candyBar.cake;
-  var cup_cake_cream_price = candyBar.cup_cake_cream;
-  var cup_cake_mastic_price = candyBar.cup_cake_mastic;
-  var gingerbreads_price = candyBar.gingerbreads;
-  var cake_pops_price = candyBar.cake_pops;
-  var zephyr_price = candyBar.zephyr;
-  var jujube_price = candyBar.jujube;
-  var makaro_price = candyBar.makaro;
+  if ($('#my_vars_json').length > 0) {
+    var candyBarJSON = $("#my_vars_json").html();
+    candyBar = $.parseJSON(candyBarJSON);
+    var cake_price = candyBar.cake;
+    var cup_cake_cream_price = candyBar.cup_cake_cream;
+    var cup_cake_mastic_price = candyBar.cup_cake_mastic;
+    var gingerbreads_price = candyBar.gingerbreads;
+    var cake_pops_price = candyBar.cake_pops;
+    var zephyr_price = candyBar.zephyr;
+    var jujube_price = candyBar.jujube;
+    var makaro_price = candyBar.makaro;
+  }
 
-  econom = 0;
-  lux = 0;
-  vip = 0;
   $("#candy-bar__chosen-plan").prop('disabled', true);
 
-  $('#price_service_economy').change(function() {
-    if ($('#price_service_economy')[0].checked) {
-      $('#price_service_lux')[0].checked = false
-      $('#price_service_vip')[0].checked = false
-      econom = 0;
-      lux = 0;
-      vip = 0;
-      econom = parseInt($('#price_service_economy').val());
-      $("#candy-bar__chosen-plan").val(econom)
-    } else {
-      econom = 0;
-    }
-    $("#results").html(count_total_field() + econom + " грн");
+  $('#economy').change(function() {
+    handle_change("economy");
   })
 
-  $('#price_service_lux').change(function() {
-    if ($('#price_service_lux')[0].checked) {
-      $('#price_service_economy')[0].checked = false
-      $('#price_service_vip')[0].checked = false
-      econom = 0;
-      lux = 0;
-      vip = 0;
-      lux = parseInt($('#price_service_lux').val());
-      $("#candy-bar__chosen-plan").val(lux)
-    } else {
-      lux = 0;
-    }
-    $("#results").html(count_total_field() + lux + " грн");
+  $('#lux').change(function() {
+    handle_change("lux");
   })
 
-  $('#price_service_vip').change(function() {
-    if ($('#price_service_vip')[0].checked) {
-      $('#price_service_economy')[0].checked = false
-      $('#price_service_lux')[0].checked = false
-      econom = 0;
-      lux = 0;
-      vip = 0;
-      vip = parseInt($('#price_service_vip').val());
-      $("#candy-bar__chosen-plan").val(vip);
-    } else {
-      vip = 0;
-    }
-    $("#results").html(count_total_field() + vip + " грн");
+  $('#vip').change(function() {
+    handle_change("vip");
   })
+
+  function handle_change(type) {
+    if ($('#' + type)[0].checked) {
+      $('#lux')[0].checked = false
+      $('#vip')[0].checked = false
+      $('#economy')[0].checked = false
+      $('#' + type)[0].checked = true
+      choosen_type_price = parseInt($('#' + type).val());
+      $("#candy-bar__chosen-plan").val(choosen_type_price)
+    } else {
+      $('#' + type)[0].checked = true
+    }
+    $("#results").html(count_total_field() + choosen_type_price + " грн");
+  }
 
   function count_total_field() {
     var cake_value = parseInt($('#cake').val()) || 0;
@@ -82,7 +62,7 @@ document.addEventListener("turbolinks:load", function() {
   }
 
   $("input").keyup(function(){
-    $("#results").html(count_total_field() + econom + lux + vip + " грн");
+    $("#results").html(count_total_field() + choosen_type_price + " грн");
   });
 
 })
