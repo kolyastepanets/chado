@@ -62,7 +62,8 @@
     .col-xs-12.col-sm-6.col-lg-4.landing-page__each-additional-service
       = link_to additional_service_path(additional_service)
         = image_tag(additional_service.image_url(:thumb), class: "landing-page__image-additional-service img-responsive")
-      p.landing-page__title-additional-service
-        = additional_service.title
+        div.landing-page__title-additional-service
+          p
+            = additional_service.title
   .col-xs-12
     = link_to "узнать больше", additional_services_path, class: "btn btn-primary landing-page__btn-learn-more btn-additional-service center-block"

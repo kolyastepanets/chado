@@ -22,6 +22,8 @@ gem 'therubyracer'
 gem 'puma'
 gem 'unicorn'
 gem 'figaro'
+gem 'delayed_job_active_record'
+gem 'daemons'
 
 group :development, :test do
   gem 'byebug'
@@ -30,6 +32,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'faker'
+  gem 'mailcatcher'
 end
 
 group :development do

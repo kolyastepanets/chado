@@ -34,10 +34,10 @@
   border-collapse: initial;
   border-radius: 10px;
 }
-.table-responsive {
+.candy-bar__table-responsive {
   margin-top: 25%;
   @media (max-width:1089px) {
-    font-size: 13px;
+    font-size: 12px;
   }
   @media (max-width:489px) {
     font-size: 9px;
@@ -86,5 +86,26 @@ td.candy-bar__th-field_input {
     @media (max-width:375px) {
       width: 30px;
     }
+  }
+}
+.candy-bar__hidden-btn {
+  display: none;
+}
+.candy-bar__btn-style-override {
+  margin-top: 0 !important;
+  width: 15% !important;
+  @media (max-width:520px) {
+    width: 27% !important;
+  }
+}
+.candy-bar__btn-default {
+  border-radius: 30px;
+}
+.candy-bar-modal__table-responsive {
+  @media (max-width:480px) {
+    font-size: 9px;
+  }
+  @media (max-width:374px) {
+    font-size: 7px;
   }
 }

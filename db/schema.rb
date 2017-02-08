@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170205095437) do
+ActiveRecord::Schema.define(version: 20170211124842) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,22 @@ ActiveRecord::Schema.define(version: 20170205095437) do
     t.integer  "makaro"
   end
 
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
   create_table "images", force: :cascade do |t|
     t.string   "file"
     t.integer  "imageable_id"
@@ -50,6 +66,24 @@ ActiveRecord::Schema.define(version: 20170205095437) do
   end
 
   add_index "images", ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id", using: :btree
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "package_type"
+    t.string   "cake"
+    t.string   "cup_cake_cream"
+    t.string   "cup_cake_mastic"
+    t.string   "gingerbreads"
+    t.string   "cake_pops"
+    t.string   "zephyr"
+    t.string   "jujube"
+    t.string   "makaro"
+    t.decimal  "total_price"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "name"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "perfomances", force: :cascade do |t|
     t.string   "title"

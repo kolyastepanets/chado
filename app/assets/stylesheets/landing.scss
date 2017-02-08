@@ -64,7 +64,10 @@
   }
 }
 .landing-page-candy-bar__btn-learn-more {
-  width: 35%;
+  width: 50%;
+  @media (max-width:520px) {
+    width: 70%;
+  }
 }
 .landing-page__btn-shows-wrap-learn-more {
   margin-top: 3%;
@@ -80,7 +83,7 @@
 .landing-page__btn-learn-more:hover {
   background-color: #07773E;
 }
-.btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus {
+.btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary:focus {
   background-color: #07773E;
 }
 .landing-page__btn-shows-wrap-learn-more:hover,
@@ -296,6 +299,9 @@ div.btn.prev, div.btn.next {
   @media (min-width:650px) and (max-width: 1169px) {
     width: 48%;
   }
+  a {
+    text-decoration: none;
+  }
 }
 .landing-page__image-additional-service {
   cursor: pointer;
@@ -308,20 +314,27 @@ div.btn.prev, div.btn.next {
   top: -9%;
 }
 .landing-page__title-additional-service {
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  font-size: 22px;
+  width: 65%;
+  height: 110%;
+  margin-left: 110px;
+  font-size: 21px;
   color: #07773E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   @media (max-width:768px) {
-    left: 45%;
+      width: 60%;
     font-size: 18px;
+  }
+  @media (max-width:375px) {
+    width: 55%;
+    font-size: 15px;
   }
 }
 .btn-additional-service {
   max-width: 20%;
   margin-bottom: 2%;
-  color: #FCEE5E;
   @media (max-width:768px) {
     max-width: 30%;
   }
@@ -334,5 +347,4 @@ div.btn.prev, div.btn.next {
   }
 }
 .btn-additional-service:hover {
-  color: #FCEE5E;
 }

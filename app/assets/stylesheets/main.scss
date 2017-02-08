@@ -11,6 +11,7 @@ body {
 }
 .main-container {
   margin-top: 80px;
+  min-height: 650px;
 }
 .navigation-bar {
   background-color: #A1E396;
@@ -100,6 +101,9 @@ body {
 .navbar-default .navbar-toggle {
   background-color: #ddd;
 }
+.alert.alert-danger {
+  text-align: center;
+}
 .col-xs-5ths,
 .col-sm-5ths,
 .col-md-5ths,
@@ -166,7 +170,7 @@ body {
   }
   @media (min-width: 768px) {
     margin-right: 5%;
-    margin-top: 5%;
+    margin-top: 4%;
   }
   @media (max-width: 640px) {
     margin-top: 20%;
@@ -273,6 +277,13 @@ body {
   margin-top: 10.5%;
   &:last-child {
     margin-left: 1%;
+  }
+  @media (min-width: 1370px) {
+    margin-left: 20%;
+    margin-top: 7.5%;
+  }
+  @media (max-width: 1330px) {
+    margin-left: 20%;
   }
   @media (max-width: 1024px) {
     margin-left: 10%;

@@ -18,6 +18,160 @@ script#my_vars_json[type="text/json"]
           i.fa.fa-chevron-right
 
     = render "calculator"
+    button.btn.btn-primary.landing-page__btn-learn-more.landing-page-candy-bar__btn-learn-more.center-block data-target="#first-modal" data-toggle="modal" type="button"
+      | Сделать заказ
+
+    #first-modal.modal.fade aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1"
+      .modal-dialog role="document"
+        .modal-content
+          .modal-header
+            button.close aria-label="Close" data-dismiss="modal" type="button"
+              span aria-hidden="true"  &times;
+            h4#exampleModalLabel.modal-title Предварительный просмотр
+          .modal-body
+            .table-responsive.candy-bar-modal__table-responsive
+              table.table.table-striped
+                thead
+                  tr.info
+                    th
+                      | Наименование
+                    th
+                      | Цена
+                    th
+                      | Кол-во
+                    th
+                      | Сумма
+                tbody
+                  tr.candy-bar__tr-candy-bar__chosen-plan-price
+                    td.candy-bar__td-name
+                      | Пакет услуг
+                    td.candy-bar__td-checkbox-choose-type
+                    td
+                     | 1
+                    td.candy-bar__td-candy-bar__chosen-plan-price
+                  tr.candy-bar__tr-cake_value
+                    td.candy-bar__td-name
+                      | Торт (мин 3кг)
+                    td
+                      = @candy_bar.cake
+                      |  грн/кг
+                    td.candy-bar__td-cake_value
+                    td.candy-bar__td-result-cake_value
+                  tr.candy-bar__tr-cup_cake_cream_value
+                    td.candy-bar__td-name
+                      | Кап кейк/крем
+                    td
+                      = @candy_bar.cup_cake_cream
+                      |  грн/шт
+                    td.candy-bar__td-cup_cake_cream_value
+                    td.candy-bar__td-result-cup_cake_cream_value
+                  tr.candy-bar__tr-cup_cake_mastic_value
+                    td.candy-bar__td-name
+                      | Кап кейк/мастикa
+                    td
+                      = @candy_bar.cup_cake_mastic
+                      |  грн/шт
+                    td.candy-bar__td-cup_cake_mastic_value
+                    td.candy-bar__td-result-cup_cake_mastic_value
+                  tr.candy-bar__tr-gingerbreads_value
+                    td.candy-bar__td-name
+                      | Пряники
+                    td
+                      = @candy_bar.gingerbreads
+                      |  грн/шт
+                    td.candy-bar__td-gingerbreads_value
+                    td.candy-bar__td-result-gingerbreads_value
+                  tr.candy-bar__tr-cake_pops_value
+                    td.candy-bar__td-name
+                      | Кейк попс
+                    td
+                      = @candy_bar.cake_pops
+                      |  грн/шт
+                    td.candy-bar__td-cake_pops_value
+                    td.candy-bar__td-result-cake_pops_value
+                  tr.candy-bar__tr-zephyr_value
+                    td.candy-bar__td-name
+                      | Зефир
+                    td
+                      = @candy_bar.zephyr
+                      |  грн/шт
+                    td.candy-bar__td-zephyr_value
+                    td.candy-bar__td-result-zephyr_value
+                  tr.candy-bar__tr-jujube_value
+                    td.candy-bar__td-name
+                      | Мармелад
+                    td
+                      = @candy_bar.jujube
+                      |  грн/100гр
+                    td.candy-bar__td-jujube_value
+                    td.candy-bar__td-result-jujube_value
+                  tr.candy-bar__tr-makaro_value
+                    td.candy-bar__td-name
+                      | Макаро
+                    td
+                      = @candy_bar.makaro
+                      |  грн/шт
+                    td.candy-bar__td-makaro_value
+                    td.candy-bar__td-result-makaro_value
+                  tr.info
+                    td.candy-bar__td-final
+                      | Итого: 
+                    td.candy-bar__td-empty-field
+                    td
+                    td.candy-bar-dialog__total-result
+
+            .cake
+            .total-result
+          .modal-footer
+            button.btn.btn-default.candy-bar__btn-default data-dismiss="modal" type="button" Закрыть
+            button.btn.btn-primary.landing-page__btn-learn-more.landing-page-candy-bar__btn-learn-more.candy-bar__btn-style-override data-target="#second-modal" data-toggle="modal" type="button" Далее
+
+    #second-modal.modal.fade aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1"
+      .modal-dialog role="document"
+        .modal-content
+          .modal-header
+            button.close aria-label="Close" data-dismiss="modal" type="button"
+              span aria-hidden="true"  &times;
+            h4#exampleModalLabel.modal-title Оформление заказа
+          .modal-body
+            = form_tag(orders_path, method: :post)
+              .form-group
+                = hidden_field_tag :candy_bar_id, @candy_bar.id
+                = hidden_field_tag :package_type
+                = hidden_field_tag :cake
+                = hidden_field_tag :cup_cake_cream
+                = hidden_field_tag :cup_cake_mastic
+                = hidden_field_tag :gingerbreads
+                = hidden_field_tag :cake_pops
+                = hidden_field_tag :zephyr
+                = hidden_field_tag :jujube
+                = hidden_field_tag :makaro
+                = hidden_field_tag :total_price
+                label.control-label for="name" Как к Вам обращаться?
+                = text_field_tag 'name', nil, class: "form-control", placeholder: "Ваше имя"
+              .form-group
+                label.control-label for="email" Введите Ваш email*
+                = text_field_tag 'email', nil, class: "form-control", placeholder: "Email*", required: true
+              .form-group
+                label.control-label for="phone" Как c Вами связаться?
+                = text_field_tag 'phone', nil, class: "form-control", placeholder: "Ваш телефон"
+              .modal-footer
+                = submit_tag "Заказать", class: "btn btn-primary landing-page__btn-learn-more landing-page-candy-bar__btn-learn-more center-block"
+
+    button.candy-bar__hidden-btn data-target="#third-modal" data-toggle="modal" type="button"
+    #third-modal.modal.fade aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1"
+      .modal-dialog role="document"
+        .modal-content
+          .modal-header
+            button.close aria-label="Close" data-dismiss="modal" type="button"
+              span aria-hidden="true"  &times;
+            h4#exampleModalLabel.modal-title Спасибо за заказ
+          .modal-body
+            | Наши менеджеры свяжутся с Вами в ближайшее время.
+            br
+            | Спасибо!
+          .modal-footer
+            button.btn.btn-default data-dismiss="modal" type="button" Закрыть
 
   .col-xs-12.col-md-7
     p
