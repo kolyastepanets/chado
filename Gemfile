@@ -24,6 +24,7 @@ gem 'unicorn'
 gem 'figaro'
 gem 'delayed_job_active_record'
 gem 'daemons'
+gem 'ahoy_matey'
 
 group :development, :test do
   gem 'byebug'

@@ -1,4 +1,5 @@
 document.addEventListener("turbolinks:load", function() {
+  ahoy.trackAll();
   var owl = $("#owl-carousel-under-photo");
   owl.owlCarousel({
     autoPlay: false,

@@ -17,4 +17,6 @@
 //= require turbolinks
 //= require owl-carousel
 //= require magnific
+//= require jquery
+//= require ahoy
 //= require_tree .
