@@ -11,4 +11,17 @@ document.addEventListener("turbolinks:load", function() {
   $(".btn-prev").click(function(){
     owl.trigger('owl.prev');
   })
+  $("#logo-animation-display").hide();
+  function toggleLogo() {
+    setTimeout(function () {
+      $("#logo-animation").show();
+      $("#logo-animation-display").hide();
+      setTimeout(function () {
+        $("#logo-animation").hide();
+        $("#logo-animation-display").show();
+        toggleLogo();
+      }, 17000);
+    }, 2800);
+  }
+  toggleLogo();
 })

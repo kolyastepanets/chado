@@ -12,6 +12,12 @@ body {
 .main-container {
   margin-top: 80px;
   min-height: 650px;
+  @media (max-width: 1200px) {
+    min-height: 300px;
+  }
+  @media (max-width: 768px) {
+    min-height: 220px;
+  }
 }
 .navigation-bar {
   background-color: #A1E396;
@@ -64,11 +70,42 @@ body {
     margin-right: 30px !important;
   }
 }
-.logo-img {
+#logo-animation {
+  height: 125px;
+  background: url(image-path("ani1.png")) left center;
   width: 180px;
   @media (max-width: 374px) {
+    background: url(image-path("ani2.png")) left center;
     width: 120px;
+    height: 80px;
   }
+}
+#logo-animation-display {
+  height: 125px;
+  background: url(image-path("animation-logo3.png")) left center;
+  -webkit-animation: play .7s steps(6) infinite;
+  -moz-animation: play .7s steps(6) infinite;
+  -o-animation: play .7s steps(6) infinite;
+  -ms-animation: play .7s steps(6) infinite;
+  animation: play .7s steps(6) infinite;
+  -webkit-animation-direction: alternate;
+  width: 180px;
+  @media (max-width: 374px) {
+    -webkit-animation: play2 .9s steps(6) infinite;
+    -moz-animation: play2 .9s steps(6) infinite;
+    -o-animation: play2 .9s steps(6) infinite;
+    -ms-animation: play2 .9s steps(6) infinite;
+    animation: play2 .9s steps(6) infinite;
+    background: url(image-path("animation-logo4.png")) left center;
+    width: 120px;
+    height: 80px;
+  }
+}
+@-webkit-keyframes play {
+  100% { background-position: -1080px; }
+}
+@-webkit-keyframes play2 {
+  100% { background-position: -723px; }
 }
 .name-brand-logo {
   color: #07773E !important;
@@ -168,9 +205,12 @@ body {
   @media (min-width: 900px) {
     margin-right: 10%;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     margin-right: 5%;
     margin-top: 4%;
+  }
+  @media (max-width: 768px) {
+    margin-top: 8%;
   }
   @media (max-width: 640px) {
     margin-top: 20%;
