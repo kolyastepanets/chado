@@ -12,17 +12,18 @@ document.addEventListener("turbolinks:load", function() {
   $(".btn-prev").click(function(){
     owl.trigger('owl.prev');
   })
+
   $("#logo-animation-display").hide();
-  function toggleLogo() {
-    setTimeout(function () {
-      $("#logo-animation").show();
-      $("#logo-animation-display").hide();
-      setTimeout(function () {
-        $("#logo-animation").hide();
-        $("#logo-animation-display").show();
-        toggleLogo();
-      }, 17000);
-    }, 2800);
+  function stop_animation() {
+    $("#logo-animation").show();
+    $("#logo-animation-display").hide();
   }
-  toggleLogo();
+
+  function run_animation() {
+    $("#logo-animation").hide();
+    $("#logo-animation-display").show();
+    setTimeout(stop_animation, 2800);
+  }
+
+  setTimeout(run_animation, 2800);
 })

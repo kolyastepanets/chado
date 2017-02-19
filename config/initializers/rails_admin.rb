@@ -15,4 +15,15 @@ RailsAdmin.config do |config|
     delete
     show_in_app
   end
+
+  config.model 'Visit' do
+    list do
+      field :started_at
+      field :browser
+      field :os
+      field :user_id
+      field :landing_page
+      field :referrer
+    end
+  end
 end

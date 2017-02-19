@@ -5,7 +5,7 @@ module ApplicationHelper
     elsif not_allowed_pages
       ""
     else
-      "background: linear-gradient(white, #A1E396, #A1E396, white);"
+      "background: linear-gradient(white, #def7da, #def7da, white);"
     end
   end
 

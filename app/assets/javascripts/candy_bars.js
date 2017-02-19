@@ -13,10 +13,15 @@ document.addEventListener("turbolinks:load", function() {
   }
 
   hash_types = [];
+  hash_types["mini"] = "Мини";
   hash_types["economy"] = "Эконом";
   hash_types["lux"] = "Люкс";
   hash_types["vip"] = "VIP";
   $("#candy-bar__chosen-plan").prop('disabled', true);
+
+  $('#mini').change(function() {
+    handle_change("mini");
+  })
 
   $('#economy').change(function() {
     handle_change("economy");
@@ -36,6 +41,7 @@ document.addEventListener("turbolinks:load", function() {
       $('#lux')[0].checked = false
       $('#vip')[0].checked = false
       $('#economy')[0].checked = false
+      $('#mini')[0].checked = false
       $('#' + type)[0].checked = true
       choosen_type_price = parseInt($('#' + type).val());
       $("#candy-bar__chosen-plan").val(choosen_type_price);

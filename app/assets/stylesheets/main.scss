@@ -6,6 +6,12 @@ body {
   font-family: 'CooperBlack';
   height: 100%;
 }
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
+}
 .wrapper {
   height: auto !important;
 }
@@ -91,11 +97,12 @@ body {
   -webkit-animation-direction: alternate;
   width: 180px;
   @media (max-width: 374px) {
-    -webkit-animation: play2 .9s steps(6) infinite;
-    -moz-animation: play2 .9s steps(6) infinite;
-    -o-animation: play2 .9s steps(6) infinite;
-    -ms-animation: play2 .9s steps(6) infinite;
-    animation: play2 .9s steps(6) infinite;
+    -webkit-animation: play2 .7s steps(6) infinite;
+    -moz-animation: play2 .7s steps(6) infinite;
+    -o-animation: play2 .7s steps(6) infinite;
+    -ms-animation: play2 .7s steps(6) infinite;
+    animation: play2 .7s steps(6) infinite;
+    -webkit-animation-direction: alternate;
     background: url(image-path("animation-logo4.png")) left center;
     width: 120px;
     height: 80px;
@@ -117,7 +124,13 @@ body {
 .name-brand-logo:hover {
   text-decoration: none;
 }
+.navbar-default .navbar-nav > li {
+  margin-right: 5px;
+}
 .navbar-default .navbar-nav > li > a {
+  padding-top: 6px !important;
+  padding-bottom: 5px !important;
+  margin-top: 8px !important;
   letter-spacing: 1px;
   color: white;
   text-align: center;
