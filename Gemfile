@@ -52,4 +52,5 @@ group :development do
   gem 'capistrano-rvm', require: false
   gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
   gem 'capistrano3-unicorn', require: false
+  gem 'capistrano3-delayed-job'
 end

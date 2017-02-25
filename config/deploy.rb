@@ -17,5 +17,12 @@ namespace :deploy do
     end
   end
 
+  task :restart_delayed_job do
+    on roles(:app), in: :sequence, wait: 5 do
+      invoke 'delayed_job:restart'
+    end
+  end
+
   after :publishing, :restart
+  after :publishing, :restart_delayed_job
 end
