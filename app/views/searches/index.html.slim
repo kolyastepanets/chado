@@ -1,0 +1,11 @@
+.col-xs-12
+  h1.search-page__title
+    | Результаты
+  - unless @searches.present?
+    p.no-results
+      | К сожалению поиск результатов не дал
+  ul.search-page__list-results
+    - @searches.each do |object|
+      li
+        = link_to object.title, "#{object.model_name.route_key}/#{object.id}"
+        = truncate(object.text, length: 250, escape: false)

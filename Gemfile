@@ -25,6 +25,9 @@ gem 'figaro'
 gem 'delayed_job_active_record'
 gem 'daemons'
 gem 'ahoy_matey'
+gem 'mysql2'
+gem 'thinking-sphinx', '~> 3.3.0'
+gem 'whenever', :require => false
 
 group :development, :test do
   gem 'byebug'

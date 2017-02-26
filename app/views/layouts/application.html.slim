@@ -42,6 +42,7 @@ html
                   = link_to "Контакты", contacts_path
         - flash.each do |name, msg|
           = content_tag :div, msg, class: "alert alert-#{name}"
+        = render 'layouts/search'
         = yield
       footer.footer
         .container.footer-container

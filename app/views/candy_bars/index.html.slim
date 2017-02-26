@@ -6,4 +6,4 @@
       | Выберите подходящий Вам по стилистике кап-кейк
     - @candy_bars.each do |candy_bar|
       = link_to candy_bar_path(candy_bar), class: ""
-        = image_tag(candy_bar.image_url(:main), class: "candy-bars__#{candy_bar.id} img-responsive")
+        = image_tag(candy_bar.image_url(:main), class: "candy-bars__#{candy_bar.id} img-responsive candy-bars__image")

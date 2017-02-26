@@ -1,0 +1,4 @@
+= form_tag(searches_path, method: :get, class: "search-form")
+  = button_tag(type: "submit", class: "btn btn-search") do
+    i.fa.fa-search aria-hidden="true"
+  = text_field_tag 'search', nil, class: "form-control", placeholder: "Поиск"

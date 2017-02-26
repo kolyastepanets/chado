@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :candy_bars, only: [:index, :show]
   resources :additional_services, only: [:index, :show]
   resources :orders, only: [:new, :create]
+  resources :searches, only: :index
 
   get 'mailer(/:action(/:id(.:format)))' => 'mailer#:action'
 

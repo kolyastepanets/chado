@@ -32,6 +32,33 @@ button::-moz-focus-inner {
   border-radius: 0 0 15px 15px;
   border: none;
 }
+input#search {
+  width: 20%;
+  float: right;
+  border-radius: 8px 0 0 8px !important;
+  &:focus {
+    border-color: #A1E396 !important;
+  }
+  @media (max-width: 424px) {
+    width: 30%;
+  }
+}
+.search-form {
+  .modal-footer {
+    border: none;
+  }
+}
+.btn-search {
+  margin-right: 10%;
+  float: right;
+  border-radius: 0 8px 8px 0 !important;
+  background-color: white;
+  border: none;
+  border: 1px solid #ccc;
+  &:hover {
+    background-color: #A1E396;
+  }
+}
 .container-nav-bar {
   margin: 0;
 }

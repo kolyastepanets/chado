@@ -9,6 +9,8 @@ require "capistrano/rails"
 require 'capistrano/puma'
 require 'capistrano3/unicorn'
 require 'capistrano/delayed_job'
+require 'thinking_sphinx/capistrano'
+require 'whenever/capistrano'
 
 # Include tasks from other gems included in your Gemfile
 #
