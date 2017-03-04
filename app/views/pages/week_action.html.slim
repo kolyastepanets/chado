@@ -1,0 +1,10 @@
+.col-xs-12.landing-page__wrap-week-action-1
+  - if @week_action
+    p.landing-page__week-action
+      span
+        = @week_action.title
+    .landing-page__week-action-text.week-action-page__preview-text
+      p
+        = @week_action.preview_text
+      p
+        = @week_action.text

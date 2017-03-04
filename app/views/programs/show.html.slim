@@ -1,0 +1,19 @@
+.row.perfomance-page__main-wrap
+  .col-xs-12
+    p.perfomance-page__wrap-title
+      = @program.title
+  .col-xs-12.col-md-5
+    = image_tag(@program.image_url(:main), class: "perfomance-page__main-image img-responsive")
+    - if @program.images.any?
+      div.wrap-owl-carousel-under-photo
+        div.btn.btn-prev
+          i.fa.fa-chevron-left
+        #owl-carousel-under-photo.parent-container
+          - @program.images.each do |image|
+            a href="#{image.file_url(:big)}"
+              = image_tag(image.file_url(:small), class: "small-img-preview img-responsive")
+        div.btn.btn-next
+          i.fa.fa-chevron-right
+
+  .col-xs-12.col-md-7.program__text-description
+    = @program.text.html_safe

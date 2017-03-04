@@ -1,0 +1,9 @@
+.row.additional_service-page__main-row
+  .col-xs-12
+    h1.additional_service-page__title
+      = @additional_service.title
+  .col-xs-5
+    = image_tag(@additional_service.image_url(:main), class: "img-responsive")
+  .col-xs-7
+    p
+      = @additional_service.text.html_safe

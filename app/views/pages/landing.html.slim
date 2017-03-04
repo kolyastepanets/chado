@@ -1,0 +1,69 @@
+- content_for :head do
+  meta content="no-cache" name="turbolinks-cache-control"
+.col-xs-12.landing-page__animation-for-children
+  .col-xs-7.landing-page__show-programs-text
+    .landing-page__show-programs-title
+      p.text-center
+        | Анимация для детей
+    .landing-page__show-programs-description
+      p
+        | Наши профессиональные актеры-аниматоры разнообразят любой праздник. Превратят его в интересную и магическую сказку, где царит веселье и детская дружба
+      = link_to "узнать больше", programs_path, class: "btn btn-primary landing-page__btn-learn-more"
+  .col-xs-5
+    = image_tag("monkey.png", class: "landing-page__show-monkey-landing-page img-responsive")
+.col-xs-12.landing-page__wrap-week-action
+  - if @week_action
+    p.landing-page__week-action
+      = image_tag("wave_left.png", class: "landing-page__image-waves img-responsive")
+      span
+        = @week_action.title
+      = image_tag("wave_right.png", class: "landing-page__image-waves img-responsive")
+    .landing-page__week-action-text
+      p
+        = @week_action.preview_text
+      = link_to "узнать больше", week_action_path, class: "btn btn-primary landing-page__btn-learn-more"
+
+.col-xs-12.landing-page__shows
+  div.btn.prev
+    i.fa.fa-chevron-left.landing-page__fa-left
+  .landing-page__carousel
+    #owl-carousel
+      - @perfomances.each do |perfomance|
+        .landing-page__describe-each-show
+          = link_to perfomance_path(perfomance)
+            = image_tag(perfomance.image_url(:thumb), class: "img-show-desc img-responsive")
+          = link_to perfomance_path(perfomance), class: "landing-page__title-show center-block"
+            = perfomance.title
+          = link_to "узнать больше", perfomance_path(perfomance), class: "btn btn-primary center-block landing-page__btn-shows-wrap-learn-more"
+  div.btn.next
+    i.fa.fa-chevron-right.landing-page__fa-right
+
+.col-xs-12.landing-page__main-wrap-candy-bar
+  .col-xs-6.landing-page__image-1
+    = image_tag("candy_bar.png", class: "landing-page__show-monkey-landing-page-candy-bar img-responsive")
+  .col-xs-6.landing-page__text-candy-bar
+    .landing-page__show-programs-title-candy-bar
+      p.text-center
+        | Candy Bar
+    .landing-page__show-programs-description-candy-bar
+      p
+        | Оформление праздничных тематических Candy Bar для создания яркого настроения
+      = link_to "узнать больше", candy_bars_path, class: "btn btn-primary landing-page__btn-learn-more landing-page-candy-bar__btn-learn-more center-block"
+  .col-xs-12.landing-page__show-programs-description-mobile-view
+    p
+      | Оформление праздничных тематических Candy Bar для создания яркого настроения
+
+    = link_to "узнать больше", candy_bars_path, class: "btn btn-primary landing-page__btn-learn-more center-block"
+
+.col-xs-12.landing-page__main-wrap-additional-services
+  h1.landing-page__title-additional-services.text-center
+    | Дополнительные услуги
+  - @additional_services.each do |additional_service|
+    .col-xs-12.col-sm-6.col-lg-4.landing-page__each-additional-service
+      = link_to additional_service_path(additional_service)
+        = image_tag(additional_service.image_url(:thumb), class: "landing-page__image-additional-service img-responsive")
+        div.landing-page__title-additional-service
+          p
+            = additional_service.title
+  .col-xs-12
+    = link_to "узнать больше", additional_services_path, class: "btn btn-primary landing-page__btn-learn-more btn-additional-service center-block"

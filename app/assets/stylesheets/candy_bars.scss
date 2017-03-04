@@ -1,0 +1,114 @@
+.candy-bars-page__main-row {
+  margin: 0 auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  color: #07773E;
+  margin-top: 3%;
+}
+.candy-bars__1, .candy-bars__2 {
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+  display: inherit;
+  @media (max-width:800px) {
+    width: 47.5%;
+  }
+  @media (max-width:800px) {
+    width: 50%;
+  }
+}
+.candy-bars__1 {
+  border-left: 10px solid white;
+  border-radius: 20px 0 0 20px;
+}
+.candy-bars__2 {
+  border-right: 10px solid white;
+  border-radius: 0 20px 20px 0;
+  border-left: 0;
+}
+.candy-bars__image {
+  cursor: pointer;
+}
+.candy-bars-page__img {
+  margin: 0 auto;
+}
+.table {
+  border: 5px solid white;
+  border-collapse: initial;
+  border-radius: 10px;
+}
+.candy-bar__table-responsive {
+  margin-top: 25%;
+  @media (max-width:1089px) {
+    font-size: 12px;
+  }
+  @media (max-width:489px) {
+    font-size: 9px;
+  }
+  @media (max-width:320px) {
+    margin-top: 30%;
+    font-size: 7px;
+  }
+}
+table.table {
+  thead {
+    tr {
+      th {
+        text-align: center;
+        border: 3px solid white;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td.candy-bar__td-name {
+        text-align: left;
+        vertical-align: middle;
+      }
+      td {
+        border: 1px solid white;
+      }
+      td.candy-bar__td-final {
+        border-right: none;
+      }
+      td.candy-bar__td-empty-field {
+        border-left: none;
+      }
+    }
+  }
+}
+.candy-bar__th-name {
+
+}
+td.candy-bar__th-field_input {
+  vertical-align: middle !important;
+  input {
+    background-color: white;
+    width: 70px;
+    border-radius: 5px;
+    @media (max-width:375px) {
+      width: 30px;
+    }
+  }
+}
+.candy-bar__hidden-btn {
+  display: none;
+}
+.candy-bar__btn-style-override {
+  margin-top: 0 !important;
+  width: 15% !important;
+  @media (max-width:520px) {
+    width: 27% !important;
+  }
+}
+.candy-bar__btn-default {
+  border-radius: 30px;
+}
+.candy-bar-modal__table-responsive {
+  @media (max-width:480px) {
+    font-size: 9px;
+  }
+  @media (max-width:374px) {
+    font-size: 7px;
+  }
+}

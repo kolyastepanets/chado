@@ -12,3 +12,8 @@
 !/log/.keep
 /tmp
 config/database.yml
+config/application.yml
+config/thinking_sphinx.yml
+public/uploads
+config/*.sphinx.conf
+db/sphinx

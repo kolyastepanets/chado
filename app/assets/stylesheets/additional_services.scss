@@ -1,0 +1,19 @@
+.additional_service-page__main-row {
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.additional_service-page__title {
+  text-align: center;
+}
+.additional_services-page__main-wrap-additional-services {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #07773E;
+  @media (max-width:768px) {
+    font-size: 29px;
+  }
+  @media (max-width:320px) {
+    font-size: 22px;
+  }
+}

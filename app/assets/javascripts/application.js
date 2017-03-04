@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
+//= require bootstrap-sprockets
 //= require turbolinks
+//= require owl-carousel
+//= require magnific
+//= require jquery
+//= require ahoy
 //= require_tree .

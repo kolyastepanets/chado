@@ -1,0 +1,27 @@
+.img-program-desc {
+  border-radius: 20%;
+  margin: 0 auto;
+  border: 5px solid white;
+}
+.program__text-description {
+  padding-left: 5%;
+  margin-top: 5%;
+}
+.programs-page__describe-each-show {
+  height: 250px;
+  margin-top: 4%;
+  @media (max-width:990px) {
+    width: 50%;
+  }
+  @media (max-width:320px) {
+    height: 200px;
+  }
+}
+.perfomance-page__animator-not-found {
+  color: #07773E;
+  text-align: center;
+  margin-top: 3%;
+  p {
+    margin-top: 1%;
+  }
+}
