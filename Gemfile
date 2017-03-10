@@ -19,7 +19,6 @@ gem 'mini_magick'
 gem "font-awesome-rails"
 gem 'non-stupid-digest-assets'
 gem 'therubyracer'
-gem 'puma'
 gem 'unicorn'
 gem 'figaro'
 gem 'delayed_job_active_record'
@@ -53,7 +52,6 @@ group :development do
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rails', require: false
   gem 'capistrano-rvm', require: false
-  gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
   gem 'capistrano3-unicorn', require: false
   gem 'capistrano3-delayed-job'
 end

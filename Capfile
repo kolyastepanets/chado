@@ -6,7 +6,6 @@ require "capistrano/deploy"
 require "capistrano/rvm"
 require "capistrano/bundler"
 require "capistrano/rails"
-require 'capistrano/puma'
 require 'capistrano3/unicorn'
 require 'capistrano/delayed_job'
 require 'thinking_sphinx/capistrano'
