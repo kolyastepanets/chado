@@ -71,7 +71,7 @@ document.addEventListener("turbolinks:load", function() {
   }
 
   function count_total_field() {
-    cake_value = parseInt($('#cake').val()) || 0;
+    cake_value = parseFloat($('#cake').val().replace(/,/g, '.')) || 0;
     cup_cake_cream_value = parseInt($('#cup_cake_cream').val()) || 0;
     cup_cake_mastic_value = parseInt($('#cup_cake_mastic').val()) || 0;
     gingerbreads_value = parseInt($('#gingerbreads').val()) || 0;
